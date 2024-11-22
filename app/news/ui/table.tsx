@@ -1,11 +1,14 @@
 'use client'
 import { Article } from "@prisma/client";
+import Link from "next/link";
 
 function ArticleRow(prop: {article: Article}) {
     return (
       <tr>
         <td className="p-3 border-b border-gray-300 dark:border-gray-600">{prop.article.title}</td>
-        <td className="p-3 border-b border-gray-300 dark:border-gray-600"> <span style={{ color: 'red' }}><a href={prop.article.link}>{prop.article.link}</a></span></td>
+        <td className="p-3 border-b border-gray-300 dark:border-gray-600"> 
+          <Link className="text-sky-700 dark:text-blanchedalmond" href={`/news/${prop.article.id}`}>{prop.article.link}</Link>
+          </td>
         <td className="p-3 border-b border-gray-300 dark:border-gray-600">{prop.article.date}</td>
       </tr>
     );

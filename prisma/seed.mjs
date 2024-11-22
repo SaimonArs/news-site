@@ -1,4 +1,4 @@
-import ARTICLES from '../articles_data.json' assert { type: 'json' };
+import ARTICLES from '../ref/articles_data.json' assert { type: 'json' };
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();

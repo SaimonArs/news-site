@@ -7,6 +7,7 @@ export default function AddNewArticle() {
 
     const handleSubmit = async (formData: FormData) => {
         await addArticle(formData);
+
         router.back();
     };
 
